@@ -1,0 +1,29 @@
+{
+  "name": "stylis-class-specificity-plugin",
+  "version": "0.0.1",
+  "description": "Adds specificity to simple class selectors (ie transforms .my-class into .my-class.my-class)",
+  "main": "lib/build.js",
+  "scripts": {
+    "build": "babel src -o lib/build.js --ignore test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kat-ya/stylis-class-specificity-plugin.git"
+  },
+  "keywords": [
+    "specificity",
+    "stylis",
+    "css"
+  ],
+  "author": "kat-ya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kat-ya/stylis-class-specificity-plugin/issues"
+  },
+  "homepage": "https://github.com/kat-ya/stylis-class-specificity-plugin#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7"
+  }
+}
