@@ -1,6 +1,6 @@
 {
   "name": "stylis-class-specificity-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds specificity to simple class selectors (ie transforms .my-class into .my-class.my-class)",
   "main": "lib/build.js",
   "scripts": {
@@ -31,8 +31,5 @@
   },
   "peerDependencies": {
     "stylis": "^3.0.0"
-  },
-  "dependencies": {
-    "stylis": "^3.5.4"
   }
 }
