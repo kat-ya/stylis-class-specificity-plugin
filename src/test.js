@@ -3,7 +3,7 @@ import stylisClassSpecificityPlugin, { STYLIS_CONTEXTS } from './index';
 describe('stylisClassSpecificityPlugin', () => {
   it('transforms .my-class into .my-class.my-class', () => {
     const selectors = ['.my-class'];
-    stylisClassSpecificityPlugin(
+    stylisClassSpecificityPlugin(2)(
       STYLIS_CONTEXTS.SELECTOR_BLOCK,
       'display: block;',
       selectors
@@ -13,7 +13,7 @@ describe('stylisClassSpecificityPlugin', () => {
 
   it('does not transform .my-class.no-spec', () => {
     const selectors = ['.my-class.no-spec'];
-    stylisClassSpecificityPlugin(
+    stylisClassSpecificityPlugin(2)(
       STYLIS_CONTEXTS.SELECTOR_BLOCK,
       'display: block;',
       selectors
@@ -23,7 +23,7 @@ describe('stylisClassSpecificityPlugin', () => {
 
   it('does not transform .my-class when context is STYLIS_CONTEXTS.NEWLINE', () => {
     const selectors = ['.my-class'];
-    stylisClassSpecificityPlugin(
+    stylisClassSpecificityPlugin(2)(
       STYLIS_CONTEXTS.NEWLINE,
       'display: block;',
       selectors

@@ -8,12 +8,12 @@ export const STYLIS_CONTEXTS = {
   AT_RULE: 3
 }
 
-const plugin = (context, content, selectors) => {
+const plugin = (repeatTimes = 1) => (context, content, selectors) => {
   if (context === STYLIS_CONTEXTS.SELECTOR_BLOCK) {
     for (let i = 0; i < selectors.length; i++) {
       const selector = selectors[i];
-      if (/^\.[\w\d-_]+$/i.test(selector)) {
-        selectors[i] = `${selectors}${selector}`
+      if (/^\.[\w\d-_]+$/i.test(selector) && repeatTimes > 1) {
+        selectors[i] = selector.repeat(repeatTimes);
       }
     }
   }
