@@ -4,7 +4,8 @@
   "description": "Adds specificity to simple class selectors (ie transforms .my-class into .my-class.my-class)",
   "main": "lib/build.js",
   "scripts": {
-    "build": "babel src -o lib/build.js --ignore test.js",
+    "build": "babel src/index.js -o lib/build.js",
+    "demo": "babel src/usage.js -o lib/show.js",
     "test": "jest"
   },
   "repository": {
@@ -30,5 +31,8 @@
   },
   "peerDependencies": {
     "stylis": "^3.0.0"
+  },
+  "dependencies": {
+    "stylis": "^3.5.4"
   }
 }
