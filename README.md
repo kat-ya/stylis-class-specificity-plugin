@@ -28,7 +28,7 @@ const StyledDiv = styled.div`
   background: #fff;
 `
 
-// repeat class name of styled styled components 2 times, ie: .nvF53f => .nvF53f.nvF53f 
+// repeat class name of styled-components 2 times, ie: .nvF53f => .nvF53f.nvF53f 
 const increaseSpecificityPlugin = plugin(2);
 
 render() {
