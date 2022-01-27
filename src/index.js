@@ -8,18 +8,21 @@ export const STYLIS_CONTEXTS = {
   AT_RULE: 3
 }
 
-const plugin = (repeatTimes = 1) => (context, content, selectors) => {
-  if (context === STYLIS_CONTEXTS.SELECTOR_BLOCK) {
-    for (let i = 0; i < selectors.length; i++) {
-      const selector = selectors[i];
-      if (/^\.[\w\d-_]+$/i.test(selector) && repeatTimes > 1) {
-        selectors[i] = selector.repeat(repeatTimes);
+function createExtraSpecifityPlugin(repeatTimes = 1) {
+  function plugin(context, content, selectors) {
+    if (context === 2) {
+      for (let i = 0; i < selectors.length; i++) {
+        const selector = selectors[i];
+        if (/^\.[\w\d-_]+$/i.test(selector) && repeatTimes > 1) {
+          selectors[i] = selector.repeat(repeatTimes);
+        }
       }
     }
   }
-};
 
-  Object.defineProperty(plugin, 'name', { value: 'stylis-class-specificity-plugin' });
+  Object.defineProperty(plugin, 'name', { value: 'createExtraSpecifityPlugin' });
 
+  return plugin;
+}
 
-export default plugin;
+export default createExtraSpecifityPlugin;
