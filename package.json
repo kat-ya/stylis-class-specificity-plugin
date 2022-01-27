@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/kat-ya/stylis-class-specificity-plugin#readme",
   "devDependencies": {
-    "@babel/cli": "^7.7.7",
+    "@babel/cli": "7.16.8",
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "jest": "^24.9.0"

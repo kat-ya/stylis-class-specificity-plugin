@@ -19,4 +19,7 @@ const plugin = (repeatTimes = 1) => (context, content, selectors) => {
   }
 };
 
+  Object.defineProperty(plugin, 'name', { value: 'stylis-class-specificity-plugin' });
+
+
 export default plugin;
